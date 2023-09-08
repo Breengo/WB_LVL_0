@@ -85,11 +85,11 @@ const configPaymentModal = () => {
   const renderPaymentMethod = () => {
     window.document
       .querySelector(".bill__container__card")
-      .querySelector("img").src = `./assets/${paymentMethods[choosen]}.svg`;
+      .querySelector("img").src = `${paymentMethods[choosen]}`;
 
     window.document
       .querySelector(".content__payment__card")
-      .querySelector("img").src = `./assets/${paymentMethods[choosen]}.svg`;
+      .querySelector("img").src = `${paymentMethods[choosen]}`;
   };
 };
 

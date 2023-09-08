@@ -62,7 +62,7 @@ const renderCart = () => {
             }
             <div class="content__cart__functions__manage">
               <img class="like_hover" src="${likeImg}" alt="error" />
-              <img class="delete_hover" src="./assets/${deleteImg}" alt="error" />
+              <img class="delete_hover" src="${deleteImg}" alt="error" />
             </div>
           </div>
           <div class="content__cart__price">

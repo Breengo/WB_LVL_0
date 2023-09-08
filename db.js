@@ -1,6 +1,10 @@
 import img1 from "./assets/CartTemplate.png";
 import img2 from "./assets/CartTemplate2.png";
 import img3 from "./assets/CartTemplate3.png";
+import visaImg from "../assets/Visa.svg";
+import mastercardImg from "../assets/Mastercard.svg";
+import maestroImg from "../assets/Maestro.svg";
+import mirImg from "../assets/Mir.svg";
 
 const cartData = [
   {
@@ -45,7 +49,7 @@ const cartData = [
   },
 ];
 
-const paymentMethods = ["Mir", "Visa", "Mastercard", "Maestro"];
+const paymentMethods = [mirImg, visaImg, mastercardImg, maestroImg];
 const adressList = [
   "Бишкек, улица Табышалиева, 57",
   "Бишкек, улица Жукеева-Пудовкина, 77/1",
