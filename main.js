@@ -5,7 +5,7 @@ import renderBill from "./scripts/renderBill";
 import renderAbsence from "./scripts/renderAbsence";
 import configCheckbox from "./scripts/configCheckbox";
 import configInputs from "./scripts/configInputs";
-import configBeansAndLikes from "./scripts/configBeansandLikes";
+import configBeansAndLikes from "./scripts/configBeansAndLikes";
 import configPaymentModal from "./scripts/configPaymentModal";
 import configAddressModal from "./scripts/configAddressModal";
 

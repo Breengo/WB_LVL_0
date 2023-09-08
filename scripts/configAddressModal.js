@@ -1,4 +1,5 @@
 import { adressList } from "../db";
+import deleteImg from "../assets/Delete.svg";
 
 const configAddressModal = () => {
   const modalAdress = document.createElement("div");
@@ -22,21 +23,21 @@ const configAddressModal = () => {
                 <button class="payment_method_active"></button>
                 <p>Бишкек, улица Табышалиева, 57</p>
             </div>
-            <img src='../assets/Delete.svg'/>
+            <img src='${deleteImg}'/>
         </div>
         <div class="modal_continaer__delivery_adress">
             <div>
                 <button></button>
                 <p>Бишкек, улица Жукеева-Пудовкина, 77/1</p>
             </div>
-            <img src='../assets/Delete.svg'/>
+            <img src='${deleteImg}'/>
         </div>
         <div class="modal_continaer__delivery_adress">
             <div>
                 <button></button>
                 <p>Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1</p>
             </div>
-            <img src='../assets/Delete.svg'/>
+            <img src='${deleteImg}'/>
         </div>
     </div>
     </div>

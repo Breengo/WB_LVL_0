@@ -1,5 +1,7 @@
 import cartData from "../db";
 import configBeansAndLikes from "./configBeansandLikes";
+import deleteImg from "../assets/Delete.svg";
+import likeImg from "../assets/Like.svg";
 
 const renderAbsence = () => {
   const absence = window.document.querySelector(".content__absence__list");
@@ -23,8 +25,8 @@ const renderAbsence = () => {
                     }</p>
                   </div>
                   <div class="content__absence__card__manage">
-                    <img class="like_hover" src="./assets/Like.svg" alt="error" />
-                    <img class="delete_hover" src="./assets/Delete.svg" alt="error" />
+                    <img class="like_hover" src="${likeImg}" alt="error" />
+                    <img class="delete_hover" src="${deleteImg}" alt="error" />
                   </div>
                 </div>
         `;

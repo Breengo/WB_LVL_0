@@ -2,7 +2,9 @@ import cartData from "../db";
 import renderBill from "./renderBill";
 import renderPrices from "./renderPrices";
 import configCheckbox from "./configCheckbox";
-import configBeansAndLikes from "./configBeansandLikes";
+import configBeansAndLikes from "./configBeansAndLikes";
+import deleteImg from "../assets/Delete.svg";
+import likeImg from "../assets/Like.svg";
 
 const renderCart = () => {
   const cart = window.document.querySelector(".content__cart");
@@ -59,8 +61,8 @@ const renderCart = () => {
                 : ""
             }
             <div class="content__cart__functions__manage">
-              <img class="like_hover" src="./assets/Like.svg" alt="error" />
-              <img class="delete_hover" src="./assets/Delete.svg" alt="error" />
+              <img class="like_hover" src="${likeImg}" alt="error" />
+              <img class="delete_hover" src="./assets/${deleteImg}" alt="error" />
             </div>
           </div>
           <div class="content__cart__price">

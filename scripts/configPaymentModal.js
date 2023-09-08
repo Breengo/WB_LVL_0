@@ -1,3 +1,7 @@
+import visaImg from "../assets/Visa.svg";
+import mastercardImg from "../assets/Mastercard.svg";
+import maestroImg from "../assets/Maestro.svg";
+import mirImg from "../assets/Mir.svg";
 import { paymentMethods } from "../db";
 
 let choosen = 0;
@@ -16,22 +20,22 @@ const configPaymentModal = () => {
   <div class="modal_container__payment_list">
     <div class="modal_container__payment_method">
     <button></button>
-    <img src="./assets/Mir.svg" alt="error"/>
+    <img src="${mirImg}" alt="error"/>
     <p>1234 56•• •••• 1234</p>
     </div>
     <div class="modal_container__payment_method">
     <button></button>
-    <img src="./assets/Visa.svg" alt="error"/>
+    <img src="${visaImg}" alt="error"/>
     <p>1234 56•• •••• 1234</p>
     </div>
     <div class="modal_container__payment_method">
     <button></button>
-    <img src="./assets/Mastercard.svg" alt="error"/>
+    <img src="${mastercardImg}" alt="error"/>
     <p>1234 56•• •••• 1234</p>
     </div>
     <div class="modal_container__payment_method">
     <button></button>
-    <img src="./assets/Maestro.svg" alt="error"/>
+    <img src="${maestroImg}" alt="error"/>
     <p>1234 56•• •••• 1234</p>
     </div>
   </div>
