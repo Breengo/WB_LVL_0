@@ -1,12 +1,17 @@
+import deleteImg from "../assets/Delete.svg";
+import likeImg from "../assets/Like.svg";
+import hoverDeleteImg from "../assets/DeleteHover.svg";
+import hoverLikeImg from "../assets/LikeHover.svg";
+
 const configBeansAndLikes = () => {
   const likes = window.document.querySelectorAll(".like_hover");
 
   likes.forEach((like) => {
     like.addEventListener("mouseover", () => {
-      like.src = "./assets/LikeHover.svg";
+      like.src = hoverLikeImg;
     });
     like.addEventListener("mouseout", () => {
-      like.src = "./assets/Like.svg";
+      like.src = likeImg;
     });
   });
 
@@ -14,10 +19,10 @@ const configBeansAndLikes = () => {
 
   beans.forEach((bean) => {
     bean.addEventListener("mouseover", () => {
-      bean.src = "./assets/DeleteHover.svg";
+      bean.src = hoverDeleteImg;
     });
     bean.addEventListener("mouseout", () => {
-      bean.src = "./assets/Delete.svg";
+      bean.src = deleteImg;
     });
   });
 };
