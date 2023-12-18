@@ -1,12 +1,12 @@
 .nav {
   display: flex;
   align-items: center;
-  padding: 20px 27px;
+  padding: 19px 26px;
 }
 
 .nav__menu {
   border: rgba(255, 255, 255, 0.452) 1px solid;
-  width: 54px;
+  width: 56px;
   height: 48px;
   border-radius: 8px;
   padding: 12px 10px;
@@ -97,7 +97,7 @@ h1 {
   margin-right: 40px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1023px) {
   .nav {
     display: flex;
     width: 100%;

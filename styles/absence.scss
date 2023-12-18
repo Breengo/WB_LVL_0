@@ -41,6 +41,7 @@
 .content__absence__card__img {
   width: 72px;
   height: 96px;
+  border-radius: 8px;
   filter: grayscale(1);
 }
 
@@ -75,9 +76,9 @@
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1023px) {
   .content__absence {
-    padding: 0px 8px 0px 16px;
+    padding: 5px 8px 0px 16px;
   }
 
   .content__absence_header {

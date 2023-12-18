@@ -8,6 +8,7 @@ import configInputs from "./scripts/configInputs";
 import configBeansAndLikes from "./scripts/configBeansAndLikes";
 import configPaymentModal from "./scripts/configPaymentModal";
 import configAddressModal from "./scripts/configAddressModal";
+import state from "./state";
 
 renderCart();
 renderAbsence();
@@ -19,17 +20,17 @@ configInputs();
 */
 
 let isCartOpened = true;
-const cartToggle = window.document
+const cartToggle = document
   .querySelector(".content__cart_header")
   .querySelector("span");
 
 cartToggle.addEventListener("click", () => {
-  const cart = window.document.querySelector(".content__cart");
-  const cartHeaderButton = window.document
+  const cart = document.querySelector(".content__cart");
+  const cartHeaderButton = document
     .querySelector(".content__cart_header")
     .querySelector(".checkbox");
 
-  const cartHeaderText = window.document
+  const cartHeaderText = document
     .querySelector(".content__cart_header")
     .querySelector("p");
 
@@ -60,14 +61,14 @@ cartToggle.addEventListener("click", () => {
       ABSENCE TOGGLE 
 */
 
-const absenceToggle = window.document
+const absenceToggle = document
   .querySelector(".content__absence_header")
   .querySelector("span");
 
 let isAbsenceOpened = true;
 
 absenceToggle.addEventListener("click", () => {
-  const list = window.document.querySelector(".content__absence__list");
+  const list = document.querySelector(".content__absence__list");
   if (isAbsenceOpened) {
     absenceToggle.style.rotate = "45deg";
     isAbsenceOpened = false;
@@ -83,46 +84,16 @@ absenceToggle.addEventListener("click", () => {
       CHECKBOXES
 */
 
-const billCheckbox = window.document.querySelector("#bill_checkbox");
+const billCheckbox = document.querySelector("#bill_checkbox");
 configCheckbox(billCheckbox);
-let swiftPayment = false;
 billCheckbox.addEventListener("click", () => {
-  swiftPayment = !swiftPayment;
-  const button = window.document.querySelector(".bill__container__order");
-  console.log("asdfa");
-  if (swiftPayment) {
-    button.innerHTML = `Оплатить ${
-      document.querySelector("#bill_sum").innerHTML
-    }`;
-  } else {
-    button.innerHTML = "Заказать";
-  }
-});
-
-const cartCheckbox = window.document.querySelector("#cart_checkbox");
-configCheckbox(
-  cartCheckbox,
-  cartData.filter((item) => item.choiced).length === 3
-);
-
-let state = cartData.filter((item) => item.choiced).length === 3;
-cartCheckbox.addEventListener("click", () => {
-  if (!state) {
-    cartData.map((data) => {
-      data.choiced = true;
-      return data;
-    });
-    renderCart();
-    renderBill();
-    state = true;
-  } else {
-    state = false;
-  }
+  state.toggleImmediatePay();
+  renderBill();
 });
 
 configBeansAndLikes();
 
-const deliveryNoteP = window.document
+const deliveryNoteP = document
   .querySelector(".content__delivery__note")
   .querySelector("p");
 
@@ -141,7 +112,7 @@ deliveryNoteP.addEventListener("mouseout", () => {
   deliveryNoteP.removeChild(note);
 });
 
-const billNoteP = window.document
+const billNoteP = document
   .querySelector(".bill__container__note")
   .querySelector("p");
 

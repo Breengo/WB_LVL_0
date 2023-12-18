@@ -4,18 +4,29 @@ import hoverDeleteImg from "../assets/DeleteHover.svg";
 import hoverLikeImg from "../assets/LikeHover.svg";
 
 const configBeansAndLikes = () => {
-  const likes = window.document.querySelectorAll(".like_hover");
+  const likes = document.querySelectorAll(".like_hover");
 
   likes.forEach((like) => {
+    let isFavorite = false;
     like.addEventListener("mouseover", () => {
       like.src = hoverLikeImg;
     });
     like.addEventListener("mouseout", () => {
-      like.src = likeImg;
+      if (!isFavorite) like.src = likeImg;
+    });
+
+    like.addEventListener("click", () => {
+      if (isFavorite) {
+        isFavorite = false;
+        like.src = likeImg;
+      } else {
+        isFavorite = true;
+        like.src = hoverLikeImg;
+      }
     });
   });
 
-  const beans = window.document.querySelectorAll(".delete_hover");
+  const beans = document.querySelectorAll(".delete_hover");
 
   beans.forEach((bean) => {
     bean.addEventListener("mouseover", () => {

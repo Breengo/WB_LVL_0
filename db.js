@@ -1,10 +1,10 @@
 import img1 from "./assets/CartTemplate.png";
 import img2 from "./assets/CartTemplate2.png";
 import img3 from "./assets/CartTemplate3.png";
-import visaImg from "../assets/Visa.svg";
-import mastercardImg from "../assets/Mastercard.svg";
-import maestroImg from "../assets/Maestro.svg";
-import mirImg from "../assets/Mir.svg";
+import visaImg from "./assets/Visa.svg";
+import mastercardImg from "./assets/Mastercard.svg";
+import maestroImg from "./assets/Maestro.svg";
+import mirImg from "./assets/Mir.svg";
 
 const cartData = [
   {
@@ -19,6 +19,7 @@ const cartData = [
     quantity: 1,
     reamins: true,
     choiced: true,
+    storage: 2,
   },
   {
     id: 2,
@@ -33,6 +34,7 @@ const cartData = [
     quantity: 200,
     reamins: false,
     choiced: true,
+    storage: 2008,
   },
   {
     id: 3,
@@ -46,6 +48,7 @@ const cartData = [
     quantity: 2,
     reamins: true,
     choiced: true,
+    storage: 2,
   },
 ];
 

@@ -6,109 +6,128 @@ const validateEmail = (email) => {
   );
 };
 
+const highliteError = (input) => {
+  const errorMessage = input.querySelector("div");
+  const inputElement = input.querySelector("input");
+  const pElement = input.querySelector("p");
+
+  errorMessage.style.color = "#F55123";
+  input.style.borderColor = "#F55123";
+  pElement.style.color = "#F55123";
+  inputElement.style.color = "#F55123";
+};
+
+const hideError = (input) => {
+  const errorMessage = input.querySelector("div");
+  const inputElement = input.querySelector("input");
+  const pElement = input.querySelector("p");
+
+  errorMessage.style.color = "transparent";
+  input.style.borderColor = "rgba(0,0,0,0.2)";
+  pElement.style.color = "#9797AF";
+  inputElement.style.color = "rgba(0,0,0)";
+};
+
 const configInputs = () => {
-  const inputs = window.document.querySelectorAll(".formInput");
-  const orderButton = window.document.querySelector(".bill__container__order");
+  const inputs = document.querySelectorAll(".formInput");
+  const orderButton = document.querySelector(".bill__container__order");
 
-  inputs.forEach((input, index) => {
-    const highliteError = () => {
-      errorMessage.style.color = "#F55123";
-      input.style.borderColor = "#F55123";
-      pElement.style.color = "#F55123";
-      inputElement.style.color = "#F55123";
-    };
-
-    const hideError = () => {
-      errorMessage.style.color = "transparent";
-      input.style.borderColor = "rgba(0,0,0,0.2)";
-      pElement.style.color = "#9797AF";
-      inputElement.style.color = "rgba(0,0,0)";
-    };
-
-    const errorMessage = input.querySelector("div");
+  inputs.forEach((input) => {
     const inputElement = input.querySelector("input");
     const pElement = input.querySelector("p");
+
     inputElement.addEventListener("focus", () => {
       pElement.style.top = "-22px";
       pElement.style.fontSize = "13px";
     });
+
     inputElement.addEventListener("blur", () => {
       if (!inputElement.value) {
         pElement.style.top = "0px";
         pElement.style.fontSize = "16px";
       }
     });
+    input.querySelector("div").style.color = "transparent";
+  });
 
-    if (index !== 4) {
-      input.querySelector("div").style.color = "transparent";
+  const INNInput = document.querySelector("#INNInput");
+  const INNerrorMessage = INNInput.querySelector("div");
+
+  INNInput.addEventListener("input", (e) => {
+    const inpVal = e.target.value;
+    e.target.value = inpVal.replace(/[^\d]/g, "");
+    e.target.value = inpVal.slice(0, 14);
+  });
+
+  INNInput.querySelector("div").style.color = "black";
+  INNInput.addEventListener("change", (event) => {
+    const inputVal = event.target.value;
+
+    if (inputVal.length !== 14 && inputVal !== "") {
+      highliteError(INNInput);
+      INNerrorMessage.innerHTML = "Проверьте ИНН";
     } else {
-      inputElement.addEventListener("change", (event) => {
-        if (event.target.value.length !== 14 && event.target.value !== "") {
-          highliteError();
-          errorMessage.innerHTML = "Проверьте ИНН";
-        } else {
-          errorMessage.innerHTML = "Для таможенного оформления";
-          hideError();
-          errorMessage.style.color = "black";
-        }
-      });
+      INNerrorMessage.innerHTML = "Для таможенного оформления";
+      hideError(INNInput);
+      INNerrorMessage.style.color = "black";
     }
+  });
 
-    if (index === 2) {
-      inputElement.addEventListener("change", (event) => {
-        if (!validateEmail(event.target.value) && event.target.value !== "") {
-          highliteError();
-          errorMessage.innerHTML = "Проверьте адрес электронной почты";
-        } else {
-          hideError();
-        }
-      });
+  const emailInput = document.querySelector("#emailInput");
+  const emailInputElement = emailInput.querySelector("input");
+  const emailErrorMessage = emailInput.querySelector("div");
+
+  emailInputElement.addEventListener("change", (event) => {
+    if (!validateEmail(event.target.value) && event.target.value !== "") {
+      highliteError(emailInput);
+      emailErrorMessage.innerHTML = "Проверьте адрес электронной почты";
+    } else {
+      hideError(emailInput);
     }
+  });
 
-    if (index === 3) {
-      inputElement.addEventListener("input", (event) => {
-        telnumMask(event);
-      });
-      inputElement.addEventListener("change", (event) => {
-        if (event.target.value.length !== 16 && event.target.value !== "") {
-          highliteError();
-          errorMessage.innerHTML = "Формат: +9 999 999 99 99";
-        } else {
-          hideError();
-        }
-      });
+  const phoneInput = document.querySelector("#phoneInput");
+  const phoneInputElement = phoneInput.querySelector("input");
+  const phoneErrorMessage = phoneInput.querySelector("div");
+
+  phoneInputElement.addEventListener("input", (event) => {
+    telnumMask(event);
+  });
+  phoneInputElement.addEventListener("change", (event) => {
+    if (event.target.value.length !== 16 && event.target.value !== "") {
+      highliteError(phoneInput);
+      phoneErrorMessage.innerHTML = "Формат: +9 999 999 99 99";
+    } else {
+      hideError(phoneInput);
     }
   });
 
   orderButton.addEventListener("click", () => {
-    inputs.forEach((input, index) => {
+    inputs.forEach((input) => {
       const inputElement = input.querySelector("input");
       const errorMessage = input.querySelector("div");
-      const pElement = input.querySelector("p");
+      hideError(input);
       if (inputElement.value === "") {
-        errorMessage.style.color = "#F55123";
-        input.style.borderColor = "#F55123";
-        pElement.style.color = "#F55123";
+        highliteError(input);
         input.scrollIntoView();
-        switch (index) {
-          case 0:
+        switch (input.getAttribute("id")) {
+          case "nameInput":
             errorMessage.innerHTML = "Укажите имя";
             break;
-          case 1:
+          case "sernameInput":
             errorMessage.innerHTML = "Укажите фамилию";
 
             break;
-          case 2:
+          case "emailInput":
             errorMessage.innerHTML = "Укажите почту";
 
             break;
-          case 3:
+          case "phoneInput":
             errorMessage.innerHTML = "Укажите номер телефона";
 
             break;
-          case 4:
+          case "INNInput":
             errorMessage.innerHTML = "Укажите ИНН";
-
             break;
         }
       }

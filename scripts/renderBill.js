@@ -1,4 +1,18 @@
 import cartData from "../db";
+import state from "../state";
+import { wordCase } from "./helpers";
+
+const renderBillButton = () => {
+  const immediatePay = state.getImmediatePay();
+  const button = document.querySelector(".bill__container__order");
+  if (immediatePay) {
+    button.innerHTML = `Оплатить ${
+      document.querySelector("#bill_sum").innerHTML
+    }`;
+  } else {
+    button.innerHTML = "Заказать";
+  }
+};
 
 const renderBill = () => {
   let sumQuantity = cartData
@@ -11,18 +25,23 @@ const renderBill = () => {
     .filter((item) => item.choiced)
     .reduce((acc, val) => acc + val.quantity * val.price, 0);
 
-  window.document.querySelector("#bill_sum").innerHTML = `${Math.round(
-    sum
-  )} сом`;
-  window.document.querySelector("#bill_fake_sum").innerHTML = `${Math.round(
+  const billSum = Math.round(sum).toLocaleString("ru");
+
+  document.querySelector("#bill_sum").innerHTML = `${billSum} сом`;
+  document.querySelector("#bill_fake_sum").innerHTML = `${Math.round(
     fakeSum
-  )} сом`;
-  window.document.querySelector(
+  ).toLocaleString("ru")} сом`;
+  document.querySelector(
     "#bill_quantity"
-  ).innerHTML = `${sumQuantity} товаров`;
-  window.document.querySelector("#bill_sale").innerHTML = `-${Math.round(
+  ).innerHTML = `${sumQuantity.toLocaleString("ru")} ${wordCase(sumQuantity, [
+    "товар",
+    "товаров",
+    "товара",
+  ])}`;
+  document.querySelector("#bill_sale").innerHTML = `-${Math.round(
     fakeSum - sum
-  )} сом`;
+  ).toLocaleString("ru")} сом`;
+  renderBillButton();
 };
 
 export default renderBill;
