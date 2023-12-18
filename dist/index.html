@@ -4,302 +4,304 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-    <script type="module" crossorigin src="/WB_LVL_0/assets/index-cd9d7cd9.js"></script>
-    <link rel="stylesheet" href="/WB_LVL_0/assets/index-4962b563.css">
+    <script type="module" crossorigin src="/WB_LVL_0/assets/index-72527f2d.js"></script>
+    <link rel="stylesheet" href="/WB_LVL_0/assets/index-d00b750a.css">
   </head>
   <body>
     
 
     <!-- NAVBAR  -->
 
-    <nav class="nav">
-      <div class="nav__menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <h1>
-        Товары <br />
-        и точка
-      </h1>
-
-      <div class="nav__search_bar">
-        <input placeholder="Я ищу..." type="text" />
-        <img src="/WB_LVL_0/assets/Search-5dc921ac.svg" alt="error" />
-      </div>
-      <a class="nav__anchor nav__anchor__first" href="#">
-        <img src="/WB_LVL_0/assets/User-929aedc1.svg" alt="error" />
-        <p>Профиль</p>
-      </a>
-      <a class="nav__anchor" href="#">
-        <img src="/WB_LVL_0/assets/Cart-8c50f07b.svg" alt="error" />
-        <p>Корзина</p>
-        <span>5</span>
-      </a>
-    </nav>
-    <main class="main">
-      <!-- CONTENT  -->
-
-      <div class="content">
-        <h2>Корзина</h2>
-        <div class="content__cart_header">
-          <button id="cart_checkbox" class="checkbox"><div></div></button>
-          <p>Выбрать всё</p>
+    <div id="page">
+      <nav class="nav">
+        <div class="nav__menu">
+          <span></span>
+          <span></span>
           <span></span>
         </div>
-        <div class="content__cart">
-          <!--  <div class="content__cart__card">
-            <div class="content__cart__card__left">
-              <div class="height_centralize">
-              <button class="checkbox"><div></div></button>
-              <img
-                class="content__cart__card__img"
-                src="./assets/CartTemplate.png"
-                alt="error"
-              />
+        <h1>
+          Товары <br />
+          и точка
+        </h1>
+
+        <div class="nav__search_bar">
+          <input placeholder="Я ищу..." type="text" />
+          <img src="/WB_LVL_0/assets/Search-5dc921ac.svg" alt="error" />
+        </div>
+        <a class="nav__anchor nav__anchor__first" href="#">
+          <img src="/WB_LVL_0/assets/User-929aedc1.svg" alt="error" />
+          <p>Профиль</p>
+        </a>
+        <a class="nav__anchor" href="#">
+          <img src="/WB_LVL_0/assets/Cart-8c50f07b.svg" alt="error" />
+          <p>Корзина</p>
+          <span class="js__cart_counter">3</span>
+        </a>
+      </nav>
+      <main class="main">
+        <!-- CONTENT  -->
+
+        <div class="content">
+          <h2>Корзина</h2>
+          <div class="content__cart_header">
+            <button id="cart_checkbox" class="checkbox"><div></div></button>
+            <p>Выбрать всё</p>
+            <span></span>
+          </div>
+          <div class="content__cart">
+            <!--  <div class="content__cart__card">
+              <div class="content__cart__card__left">
+                <div class="height_centralize">
+                <button class="checkbox"><div></div></button>
+                <img
+                  class="content__cart__card__img"
+                  src="./assets/CartTemplate.png"
+                  alt="error"
+                />
+                </div>
+                <div class="content__cart__item">
+                  <p class="content__cart__item__title">
+                    Футболка UZcotton мужская
+                  </p>
+                  <p class="content__cart__item__type">
+                    <span>Цвет: белый</span> <span>Размер: 56</span>
+                  </p>
+                  <p class="content__cart__item__company">Коледино WB</p>
+                  <p class="content__cart__item__company">
+                    ООО Вайлдбериз <span>i</span>
+                  </p>
+                </div>
               </div>
-              <div class="content__cart__item">
-                <p class="content__cart__item__title">
-                  Футболка UZcotton мужская
-                </p>
-                <p class="content__cart__item__type">
-                  <span>Цвет: белый</span> <span>Размер: 56</span>
-                </p>
-                <p class="content__cart__item__company">Коледино WB</p>
-                <p class="content__cart__item__company">
-                  ООО Вайлдбериз <span>i</span>
-                </p>
+  
+              <div class="content__card__card__right">
+                <div class="content__cart__functions">
+                  <div class="content__cart__functions__summarizer">
+                    <button>−</button>
+                    <p>1</p>
+                    <button>+</button>
+                  </div>
+                  <p class="content__cart__functions__remains">Осталось 2шт.</p>
+                  <div class="content__cart__functions__manage">
+                    <img src="./assets/Like.svg" alt="error" />
+                    <img src="./assets/Delete.svg" alt="error" />
+                  </div>
+                </div>
+                <div class="content__cart__price">
+                  <p class="content__cart__price__main">522 <span>сом</span></p>
+                  <p class="content__cart__price__fake">1051 <span>сом</span></p>
+                </div>
               </div>
+            </div>  -->
+          </div>
+
+          <div class="content__absence">
+            <div class="content__absence_header">
+              <p>Отсутствуют · 3 товара</p>
+              <span></span>
             </div>
 
-            <div class="content__card__card__right">
-              <div class="content__cart__functions">
-                <div class="content__cart__functions__summarizer">
-                  <button>−</button>
-                  <p>1</p>
-                  <button>+</button>
+            <div class="content__absence__list">
+              <!-- <div class="content__absence__card">
+                <img class="content__absence__card__img" src="./assets/CartTemplate.png" alt="error" />
+                <div class="content__absence__card__description">
+                  <p>Футболка UZcotton мужская</p>
+                  <p><span>Цвет: белый</span> <span>Размер: 56</span></p>
                 </div>
-                <p class="content__cart__functions__remains">Осталось 2шт.</p>
-                <div class="content__cart__functions__manage">
+                <div class="content__absence__card__manage">
                   <img src="./assets/Like.svg" alt="error" />
                   <img src="./assets/Delete.svg" alt="error" />
                 </div>
-              </div>
-              <div class="content__cart__price">
-                <p class="content__cart__price__main">522 <span>сом</span></p>
-                <p class="content__cart__price__fake">1051 <span>сом</span></p>
-              </div>
+              </div> -->
             </div>
-          </div>  -->
-        </div>
-
-        <div class="content__absence">
-          <div class="content__absence_header">
-            <p>Отсутствуют · 3 товара</p>
-            <span></span>
           </div>
 
-          <div class="content__absence__list">
-            <!-- <div class="content__absence__card">
-              <img class="content__absence__card__img" src="./assets/CartTemplate.png" alt="error" />
-              <div class="content__absence__card__description">
-                <p>Футболка UZcotton мужская</p>
-                <p><span>Цвет: белый</span> <span>Размер: 56</span></p>
-              </div>
-              <div class="content__absence__card__manage">
-                <img src="./assets/Like.svg" alt="error" />
-                <img src="./assets/Delete.svg" alt="error" />
-              </div>
-            </div> -->
-          </div>
-        </div>
-
-        <div class="content__delivery">
-          <h3>
-            Способ доставки <span class="adresses_open_payment">Изменить</span>
-          </h3>
-          <table class="content__delivery__info">
-            <tr>
-              <td>Пункт выдачи</td>
-              <td class="content__delivery__address">
-                <p>Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
-                <p>
-                  <span><img src="/WB_LVL_0/assets/Star-7e6f479a.svg" alt="error" />4.99</span
-                  >Ежедневно с 10 до 21
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td>Стоимость доставки</td>
-              <td>Бесплатно</td>
-            </tr>
-            <tr>
-              <td>5—6 февраля</td>
-              <td class="content__delivery__items">
-                <img src="/WB_LVL_0/assets/CartTemplate-326f0d4d.png" alt="error" />
-                <div class="content__delivery__items__img_wraper">
-                  <img src="/WB_LVL_0/assets/CartTemplate2-291877c8.png" alt="error" />
-                  <span>184</span>
-                </div>
-                <div class="content__delivery__items__img_wraper">
-                  <img src="/WB_LVL_0/assets/CartTemplate3-3f020ca1.png" alt="error" />
-                  <span>2</span>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>7—8 февраля</td>
-              <td class="content__delivery__items">
-                <div class="content__delivery__items__img_wraper">
-                  <img src="/WB_LVL_0/assets/CartTemplate2-291877c8.png" alt="error" />
-                  <span>16</span>
-                </div>
-              </td>
-            </tr>
-          </table>
-          <div class="content__delivery__note">
-            <img src="/WB_LVL_0/assets/BackShip-dba85ce1.svg" alt="error" />
-            <p>
-              Обратная доставка товаров на склад при отказе —
-              <span> бесплатно</span>
-            </p>
-          </div>
-        </div>
-
-        <div class="content__payment">
-          <h3>
-            Способ оплаты <span class="modal_open_payment">Изменить</span>
-          </h3>
-          <div class="content__payment__card">
-            <div><img src="/WB_LVL_0/assets/Mir-536cd2da.svg" alt="error" /></div>
-            <p>1234 56•• •••• 1234 <span>01/30</span></p>
-          </div>
-          <p class="content__payment__note">
-            Спишем оплату с карты при получении
-          </p>
-        </div>
-
-        <div class="content__receiver">
-          <h3>Получатель</h3>
-          <form class="content__receiver__form">
-            <div class="content__receiver__form__top">
-              <div class="formInput">
-                <input type="text" />
-                <p>Имя</p>
-                <div>Для таможенного оформления</div>
-              </div>
-              <div class="formInput">
-                <input type="text" />
-                <p>Фамилия</p>
-                <div>Для таможенного оформления</div>
-              </div>
+          <div class="content__delivery">
+            <h3>
+              Способ доставки
+              <span class="adresses_open_payment">Изменить</span>
+            </h3>
+            <table class="content__delivery__info">
+              <tr>
+                <td>Пункт выдачи</td>
+                <td class="content__delivery__address">
+                  <p>Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+                  <p>
+                    <span><img src="/WB_LVL_0/assets/Star-7e6f479a.svg" alt="error" />4.99</span
+                    >Ежедневно с 10 до 21
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>Стоимость доставки</td>
+                <td>Бесплатно</td>
+              </tr>
+              <!-- <tr>
+                <td>5—6 февраля</td>
+                <td class="content__delivery__items">
+                  <img src="./assets/CartTemplate.png" alt="error" />
+                  <div class="content__delivery__items__img_wraper">
+                    <img src="./assets/CartTemplate2.png" alt="error" />
+                    <span>184</span>
+                  </div>
+                  <div class="content__delivery__items__img_wraper">
+                    <img src="./assets/CartTemplate3.png" alt="error" />
+                    <span>2</span>
+                  </div>
+                </td>
+              </tr> -->
+              <!-- <tr>
+                <td>7—8 февраля</td>
+                <td class="content__delivery__items">
+                  <div class="content__delivery__items__img_wraper">
+                    <img src="./assets/CartTemplate2.png" alt="error" />
+                    <span>16</span>
+                  </div>
+                </td>
+              </tr> -->
+            </table>
+            <div class="content__delivery__note">
+              <img src="/WB_LVL_0/assets/BackShip-dba85ce1.svg" alt="error" />
+              <p>
+                Обратная доставка товаров на склад при отказе —
+                <span> бесплатно</span>
+              </p>
             </div>
-            <div class="content__receiver__form__bot">
-              <div class="formInput">
-                <input type="text" />
-                <p>Почта</p>
-                <div>Для таможенного оформления</div>
-              </div>
-              <div class="formInput">
-                <input type="text" />
-                <p>Телефон</p>
-                <div>Для таможенного оформления</div>
-              </div>
-              <div class="formInput">
-                <input type="text" />
-                <p>ИНН</p>
-                <div>Для таможенного оформления</div>
-              </div>
+          </div>
+
+          <div class="content__payment">
+            <h3>
+              Способ оплаты <span class="modal_open_payment">Изменить</span>
+            </h3>
+            <div class="content__payment__card">
+              <div><img src="/WB_LVL_0/assets/Mir-536cd2da.svg" alt="error" /></div>
+              <p>1234 56•• •••• 1234 <span>01/30</span></p>
             </div>
-          </form>
-        </div>
-      </div>
-
-      <!-- BILL  -->
-
-      <div class="bill">
-        <div class="bill__container">
-          <p class="bill__container__info bill__container__info__bold">
-            <span>Итого</span>
-            <span id="bill_sum">2 101 063 <span>сом</span></span>
-          </p>
-          <p class="bill__container__info">
-            <span id="bill_quantity">203 товара</span>
-            <span id="bill_fake_sum">2 302 048 сом</span>
-          </p>
-          <p class="bill__container__info">
-            <span>Скидка</span> <span id="bill_sale">-200 985 сом</span>
-          </p>
-          <p class="bill__container__info">
-            <span>Доставка</span> <span>Бесплатно</span>
-          </p>
-
-          <h3>
-            Доставка в пункт выдачи
-            <img
-              class="adresses_open_payment"
-              src="/WB_LVL_0/assets/Update-73cbb66c.svg"
-              alt="error"
-            />
-          </h3>
-          <p class="bill__container__address">
-            Бишкек, улица Ахматбека Суюмбаева, 12/1
-          </p>
-          <p class="bill__container__date">5-8 фев</p>
-          <div class="bill__container__note">
-            <img src="/WB_LVL_0/assets/BackShip-dba85ce1.svg" alt="error" />
-            <p>
-              Обратная доставка товаров на склад при отказе —
-              <span>бесплатно</span>
+            <p class="content__payment__note">
+              Спишем оплату с карты при получении
             </p>
           </div>
 
-          <h3>
-            Оплата картой
-            <img
-              class="modal_open_payment"
-              src="/WB_LVL_0/assets/Update-73cbb66c.svg"
-              alt="error"
-            />
-          </h3>
-          <div class="bill__container__card">
-            <div><img src="/WB_LVL_0/assets/Mir-536cd2da.svg" alt="error" /></div>
-            <p>1234 12•• •••• 1234</p>
-          </div>
-          <div class="bill__container__note bill__container__note2">
-            <p>
-              <button id="bill_checkbox" class="checkbox"><div></div></button
-              >Списать оплату сразу
-            </p>
-            <p>Спишем оплату с карты при получении</p>
-          </div>
-
-          <button class="bill__container__order">Заказать</button>
-          <div class="bill__container__accept">
-            <img src="/WB_LVL_0/assets/Accept-89b438d6.svg" alt="error" />
-            <p>
-              Соглашаюсь
-              <a href="#">с правилами пользования торговой площадкой</a> и
-              <a href="#">возврата</a>
-            </p>
+          <div class="content__receiver">
+            <h3>Получатель</h3>
+            <form class="content__receiver__form">
+              <div class="content__receiver__form__top">
+                <div id="nameInput" class="formInput">
+                  <input type="text" />
+                  <p>Имя</p>
+                  <div>Для таможенного оформления</div>
+                </div>
+                <div id="sernameInput" class="formInput">
+                  <input type="text" />
+                  <p>Фамилия</p>
+                  <div>Для таможенного оформления</div>
+                </div>
+              </div>
+              <div class="content__receiver__form__bot">
+                <div id="emailInput" class="formInput">
+                  <input type="text" />
+                  <p>Почта</p>
+                  <div>Для таможенного оформления</div>
+                </div>
+                <div id="phoneInput" class="formInput">
+                  <input type="text" />
+                  <p>Телефон</p>
+                  <div>Для таможенного оформления</div>
+                </div>
+                <div id="INNInput" class="formInput">
+                  <input type="text" />
+                  <p>ИНН</p>
+                  <div>Для таможенного оформления</div>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
+
+        <!-- BILL  -->
+
+        <div class="bill">
+          <div class="bill__container">
+            <p class="bill__container__info bill__container__info__bold">
+              <span>Итого</span>
+              <span id="bill_sum">2 101 063 <span>сом</span></span>
+            </p>
+            <p class="bill__container__info">
+              <span id="bill_quantity">203 товара</span>
+              <span id="bill_fake_sum">2 302 048 сом</span>
+            </p>
+            <p class="bill__container__info">
+              <span>Скидка</span> <span id="bill_sale">-200 985 сом</span>
+            </p>
+            <p class="bill__container__info">
+              <span>Доставка</span> <span>Бесплатно</span>
+            </p>
+
+            <h3>
+              Доставка в пункт выдачи
+              <img
+                class="adresses_open_payment"
+                src="/WB_LVL_0/assets/Update-73cbb66c.svg"
+                alt="error"
+              />
+            </h3>
+            <p class="bill__container__address">
+              Бишкек, улица Ахматбека Суюмбаева, 12/1
+            </p>
+            <p class="bill__container__date">5-8 фев</p>
+            <div class="bill__container__note">
+              <img src="/WB_LVL_0/assets/BackShip-dba85ce1.svg" alt="error" />
+              <p>
+                Обратная доставка товаров на склад при отказе —
+                <span>бесплатно</span>
+              </p>
+            </div>
+
+            <h3>
+              Оплата картой
+              <img
+                class="modal_open_payment"
+                src="/WB_LVL_0/assets/Update-73cbb66c.svg"
+                alt="error"
+              />
+            </h3>
+            <div class="bill__container__card">
+              <div><img src="/WB_LVL_0/assets/Mir-536cd2da.svg" alt="error" /></div>
+              <p>1234 12•• •••• 1234</p>
+            </div>
+            <div class="bill__container__note bill__container__note2">
+              <p>
+                <button id="bill_checkbox" class="checkbox"><div></div></button
+                >Списать оплату сразу
+              </p>
+              <p>Спишем оплату с карты при получении</p>
+            </div>
+
+            <button class="bill__container__order">Заказать</button>
+            <div class="bill__container__accept">
+              <img src="/WB_LVL_0/assets/Accept-89b438d6.svg" alt="error" />
+              <p>
+                Соглашаюсь
+                <a href="#">с правилами пользования торговой площадкой</a> и
+                <a href="#">возврата</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- FOOOTER  -->
+
+      <footer class="footer">© 2022 ООО «Товары и точка»</footer>
+      <div class="mobile_menu">
+        <img src="/WB_LVL_0/assets/MobileHome-5a287597.svg" alt="error" />
+        <img src="/WB_LVL_0/assets/MobileCatalog-f789a521.svg" alt="error" />
+        <div class="mobile_menu__notif">
+          <img src="/WB_LVL_0/assets/MobileCart-f4e31968.svg" alt="error" />
+          <span class="js__cart_counter">3</span>
+        </div>
+        <img src="/WB_LVL_0/assets/MobileFavorites-47a24ba9.svg" alt="error" />
+        <img src="/WB_LVL_0/assets/MobileUser-d5b1cebc.svg" alt="error" />
       </div>
-    </main>
-
-    <!-- FOOOTER  -->
-
-    <footer class="footer">© 2022 ООО «Товары и точка»</footer>
-
-    <div class="mobile_menu">
-      <img src="/WB_LVL_0/assets/MobileHome-5a287597.svg" alt="error" />
-      <img src="/WB_LVL_0/assets/MobileCatalog-f789a521.svg" alt="error" />
-      <div class="mobile_menu__notif">
-        <img src="/WB_LVL_0/assets/MobileCart-f4e31968.svg" alt="error" />
-        <span>5</span>
-      </div>
-      <img src="/WB_LVL_0/assets/MobileFavorites-47a24ba9.svg" alt="error" />
-      <img src="/WB_LVL_0/assets/MobileUser-d5b1cebc.svg" alt="error" />
     </div>
   </body>
 </html>
