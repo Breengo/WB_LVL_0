@@ -129,6 +129,7 @@ const renderCart = () => {
 
     div.querySelector(".delete_hover").addEventListener("click", () => {
       cartData.splice(index, 1);
+      renderBill();
       renderCart();
     });
 
